@@ -52,6 +52,22 @@ public class Forms
 		shape2.sides = side;
 		forme[i] = shape2;
 	}
+	
+	public void TheTriangle(int i)
+	{
+		System.out.println("You have chosen the triangle");
+		System.out.print("Insert side 1: ");
+		float side1 = scan.nextFloat();                      // nextInt metodo di scan
+		System.out.print("Insert side 2: ");
+		int side2 = scan.nextInt(); 
+		System.out.print("Insert side 3: ");
+		int side3 = scan.nextInt(); 
+		Triangle shape3 = new Triangle();
+		shape3.side1 = side1;
+		shape3.side2 = side2;
+		shape3.side3 = side3;
+		forme[i] = shape3;
+	}
 
 	public void Printing()
 	{
@@ -83,6 +99,10 @@ public class Forms
 			case "s":
 			case "S":
 				TheSquare(i);
+				break;
+			case "t":
+			case "T":
+				TheTriangle(i);
 				break;
 			default:
 				System.out.println("ERROR! Type in valid shape.");
